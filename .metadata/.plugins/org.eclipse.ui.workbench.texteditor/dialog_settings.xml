@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="309" key="DIALOG_WIDTH"/>
+		<item value="85" key="DIALOG_Y_ORIGIN"/>
+		<item value="719" key="DIALOG_X_ORIGIN"/>
+		<item value="592" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="NumberOfAgent" key="selection"/>
+		<list key="findhistory">
+			<item value="NumberOfAgent"/>
+			<item value="ctrl_stepsize"/>
+			<item value="EPuckMaximumSpeed_Animal"/>
+			<item value="AnimalController"/>
+			<item value="ComputingAgentSpeed"/>
+			<item value="updateFitness"/>
+			<item value="computeAggregationValue"/>
+			<item value="EPuck"/>
+		</list>
+		<list key="replacehistory">
+			<item value="EPuckMaximumSpeed"/>
+			<item value="AgentController"/>
+			<item value="NumberOfAgent"/>
+		</list>
+	</section>
+</section>

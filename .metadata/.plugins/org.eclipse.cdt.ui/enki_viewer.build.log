@@ -1,0 +1,6 @@
+15:29:18 **** Clean-only build of configuration Default for project enki_viewer ****
+make clean 
+rm -rf obj/*.o *.txt *~ RandomWalk
+
+15:29:18 Build Finished (took 63ms)
+
