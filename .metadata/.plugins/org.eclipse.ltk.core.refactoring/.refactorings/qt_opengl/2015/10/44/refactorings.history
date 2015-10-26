@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;qt_opengl/src/qt_opengl.cpp&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;qt_opengl.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/qt_opengl.cpp" name="main.cpp" stamp="1445796563587" updateReferences="true"/>
+</session>

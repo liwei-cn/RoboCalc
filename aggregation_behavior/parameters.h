@@ -8,14 +8,14 @@
 #include <gsl/gsl_randist.h>
 using namespace std;
 
-const int NumberOfAgent = 10;
+const int NumberOfAgent = 20;
 const double AreaPerRobot = 10000.0;
 const double EPuckRadius = 3.7;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;
 const int MaximumStepSize = 1000;
 const int OversamplingRate = 10;
-const int ArenaWidth = 100;
+const int ArenaWidth = 200;
 
 extern gsl_rng *rng;
 
