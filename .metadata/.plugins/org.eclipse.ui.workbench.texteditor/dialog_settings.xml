@@ -3,28 +3,29 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="309" key="DIALOG_WIDTH"/>
 		<item value="85" key="DIALOG_Y_ORIGIN"/>
-		<item value="620" key="DIALOG_HEIGHT"/>
 		<item value="719" key="DIALOG_X_ORIGIN"/>
+		<item value="592" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="timeMultiplier" key="selection"/>
+		<item value="." key="selection"/>
 		<list key="findhistory">
+			<item value="-&gt;"/>
+			<item value="myworld"/>
+			<item value="epucks"/>
 			<item value="timeMultiplier"/>
 			<item value="NumberOfAgent"/>
 			<item value="ctrl_stepsize"/>
 			<item value="EPuckMaximumSpeed_Animal"/>
 			<item value="AnimalController"/>
-			<item value="ComputingAgentSpeed"/>
-			<item value="updateFitness"/>
-			<item value="computeAggregationValue"/>
 		</list>
 		<list key="replacehistory">
+			<item value="."/>
 			<item value="EPuckMaximumSpeed"/>
 			<item value="AgentController"/>
 			<item value="NumberOfAgent"/>

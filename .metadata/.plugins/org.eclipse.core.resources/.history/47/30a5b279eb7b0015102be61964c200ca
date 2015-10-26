@@ -1,0 +1,23 @@
+/*
+ * myWorld.h
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: liwei
+ */
+
+#ifndef MYWORLD_H_
+#define MYWORLD_H_
+
+#include <enki/PhysicalEngine.h>
+#include <enki/robots/e-puck/EPuck.h>
+
+class myWorld : public Enki::World
+{
+public:
+	myWorld(double width, double height, const Enki::Color& wallsColor, unsigned maxSteps);
+
+};
+
+
+
+#endif /* MYWORLD_H_ */
