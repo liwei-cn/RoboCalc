@@ -1,10 +1,10 @@
-15:03:55 **** Incremental Build of configuration Default for project aggregation_behavior ****
+22:13:38 **** Incremental Build of configuration Default for project object_clustering ****
 make all 
 g++ -c -o obj/myWorld.o myWorld.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
 In file included from /usr/include/c++/4.8/cassert:43:0,
                  from /home/liwei/Softwares/enki-master/enki/Types.h:40,
                  from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:38,
-                 from agent.h:11,
+                 from agent.h:13,
                  from myWorld.h:11,
                  from myWorld.cpp:8:
 /home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘const double& Enki::Color::operator[](size_t) const’:
@@ -16,7 +16,7 @@ In file included from /usr/include/c++/4.8/cassert:43:0,
    double& operator[](size_t i) { assert((i >= 0) && (i < 4)); return components[i]; }
                                                ^
 In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40:0,
-                 from agent.h:11,
+                 from agent.h:13,
                  from myWorld.h:11,
                  from myWorld.cpp:8:
 /home/liwei/Softwares/enki-master/enki/Interaction.h: At global scope:
@@ -49,7 +49,7 @@ In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40
    virtual void finalize(double dt, World *w) { }
                 ^
 /home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘w’ [-Wunused-parameter]
-In file included from agent.h:11:0,
+In file included from agent.h:13:0,
                  from myWorld.h:11,
                  from myWorld.cpp:8:
 /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
@@ -85,6 +85,353 @@ In file included from agent.h:11:0,
    virtual void controlStep(double dt) { }
                 ^
 g++ -o main obj/main.o obj/agent.o obj/myWorld.o -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer -lenki -lenkiviewer -lgsl -lgslcblas -lm -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL -lX11 -lXext
-15:03:57 **** Incremental Build of configuration Default for project aggregation_behavior ****
+22:13:40 **** Incremental Build of configuration Default for project object_clustering ****
 make all 
 make: Nothing to be done for `all'.
+09:24:08 **** Incremental Build of configuration Default for project object_clustering ****
+make all 
+make: Nothing to be done for `all'.
+10:17:19 **** Incremental Build of configuration Default for project object_clustering ****
+make all 
+g++ -c -o obj/myWorld.o myWorld.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from /home/liwei/Softwares/enki-master/enki/Types.h:40,
+                 from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:38,
+                 from agent.h:13,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘const double& Enki::Color::operator[](size_t) const’:
+/home/liwei/Softwares/enki-master/enki/Types.h:70:59: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   const double& operator[](size_t i) const { assert((i >= 0) && (i < 4)); return components[i]; }
+                                                           ^
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘double& Enki::Color::operator[](size_t)’:
+/home/liwei/Softwares/enki-master/enki/Types.h:72:47: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   double& operator[](size_t i) { assert((i >= 0) && (i < 4)); return components[i]; }
+                                               ^
+In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40:0,
+                 from agent.h:13,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/Interaction.h: At global scope:
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void objectStep(double dt, World* w, PhysicalObject *po) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘po’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void wallsStep(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void step(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+In file included from agent.h:13:0,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalInteractions(double dt, World *w, PhysicalObject *o) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘o’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalWallsInteraction(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:501:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void controlStep(double dt) { }
+                ^
+g++ -o main obj/main.o obj/agent.o obj/myWorld.o -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer -lenki -lenkiviewer -lgsl -lgslcblas -lm -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL -lX11 -lXext
+10:23:09 **** Incremental Build of configuration Default for project object_clustering ****
+make all 
+g++ -c -o obj/main.o main.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from /home/liwei/Softwares/enki-master/enki/Types.h:40,
+                 from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:38,
+                 from agent.h:13,
+                 from main.cpp:7:
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘const double& Enki::Color::operator[](size_t) const’:
+/home/liwei/Softwares/enki-master/enki/Types.h:70:59: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   const double& operator[](size_t i) const { assert((i >= 0) && (i < 4)); return components[i]; }
+                                                           ^
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘double& Enki::Color::operator[](size_t)’:
+/home/liwei/Softwares/enki-master/enki/Types.h:72:47: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   double& operator[](size_t i) { assert((i >= 0) && (i < 4)); return components[i]; }
+                                               ^
+In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40:0,
+                 from agent.h:13,
+                 from main.cpp:7:
+/home/liwei/Softwares/enki-master/enki/Interaction.h: At global scope:
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void objectStep(double dt, World* w, PhysicalObject *po) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘po’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void wallsStep(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void step(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+In file included from agent.h:13:0,
+                 from main.cpp:7:
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalInteractions(double dt, World *w, PhysicalObject *o) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘o’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalWallsInteraction(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:501:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void controlStep(double dt) { }
+                ^
+In file included from main.cpp:10:0:
+/home/liwei/Softwares/enki-master/viewer/Viewer.h:70:17: warning: unused parameter ‘object’ [-Wunused-parameter]
+    virtual void drawSpecial(PhysicalObject* object, int param = 0) const { }
+                 ^
+/home/liwei/Softwares/enki-master/viewer/Viewer.h:70:17: warning: unused parameter ‘param’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/viewer/Viewer.h:72:17: warning: unused parameter ‘viewer’ [-Wunused-parameter]
+    virtual void cleanup(ViewerWidget* viewer) { }
+                 ^
+g++ -c -o obj/agent.o agent.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from /home/liwei/Softwares/enki-master/enki/Types.h:40,
+                 from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:38,
+                 from agent.h:13,
+                 from agent.cpp:7:
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘const double& Enki::Color::operator[](size_t) const’:
+/home/liwei/Softwares/enki-master/enki/Types.h:70:59: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   const double& operator[](size_t i) const { assert((i >= 0) && (i < 4)); return components[i]; }
+                                                           ^
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘double& Enki::Color::operator[](size_t)’:
+/home/liwei/Softwares/enki-master/enki/Types.h:72:47: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   double& operator[](size_t i) { assert((i >= 0) && (i < 4)); return components[i]; }
+                                               ^
+In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40:0,
+                 from agent.h:13,
+                 from agent.cpp:7:
+/home/liwei/Softwares/enki-master/enki/Interaction.h: At global scope:
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void objectStep(double dt, World* w, PhysicalObject *po) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘po’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void wallsStep(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void step(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+In file included from agent.h:13:0,
+                 from agent.cpp:7:
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalInteractions(double dt, World *w, PhysicalObject *o) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘o’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalWallsInteraction(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:501:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void controlStep(double dt) { }
+                ^
+g++ -c -o obj/myWorld.o myWorld.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from /home/liwei/Softwares/enki-master/enki/Types.h:40,
+                 from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:38,
+                 from agent.h:13,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘const double& Enki::Color::operator[](size_t) const’:
+/home/liwei/Softwares/enki-master/enki/Types.h:70:59: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   const double& operator[](size_t i) const { assert((i >= 0) && (i < 4)); return components[i]; }
+                                                           ^
+/home/liwei/Softwares/enki-master/enki/Types.h: In member function ‘double& Enki::Color::operator[](size_t)’:
+/home/liwei/Softwares/enki-master/enki/Types.h:72:47: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+   double& operator[](size_t i) { assert((i >= 0) && (i < 4)); return components[i]; }
+                                               ^
+In file included from /home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:40:0,
+                 from agent.h:13,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/Interaction.h: At global scope:
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:72:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void objectStep(double dt, World* w, PhysicalObject *po) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:79:16: warning: unused parameter ‘po’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void wallsStep(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:84:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:86:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void init(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:107:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void step(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:109:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalize(double dt, World *w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/Interaction.h:111:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+In file included from agent.h:13:0,
+                 from myWorld.h:11,
+                 from myWorld.cpp:8:
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:338:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalInteractions(double dt, World *w, PhysicalObject *o) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:340:16: warning: unused parameter ‘o’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doLocalWallsInteraction(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:342:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeLocalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:344:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void initGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:347:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void doGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:349:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void finalizeGlobalInteractions(double dt, World* w) { }
+                ^
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:351:16: warning: unused parameter ‘w’ [-Wunused-parameter]
+/home/liwei/Softwares/enki-master/enki/PhysicalEngine.h:501:16: warning: unused parameter ‘dt’ [-Wunused-parameter]
+   virtual void controlStep(double dt) { }
+                ^
+g++ -o main obj/main.o obj/agent.o obj/myWorld.o -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer -lenki -lenkiviewer -lgsl -lgslcblas -lm -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL -lX11 -lXext

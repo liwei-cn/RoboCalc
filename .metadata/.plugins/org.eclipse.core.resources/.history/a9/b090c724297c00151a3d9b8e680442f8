@@ -1,0 +1,18 @@
+/*
+ * ObjectInterface.h
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: liwei
+ */
+
+#ifndef OBJECTINTERFACE_H_
+#define OBJECTINTERFACE_H_
+
+class ObjectInterface
+{
+
+};
+
+
+
+#endif /* OBJECTINTERFACE_H_ */

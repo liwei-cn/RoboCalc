@@ -1,0 +1,13 @@
+/*
+ * object.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: liwei
+ */
+
+#include "object.h"
+
+Object::Object() : myRadius(ObjectRadius), myColor(ObjectColor),
+{
+
+}

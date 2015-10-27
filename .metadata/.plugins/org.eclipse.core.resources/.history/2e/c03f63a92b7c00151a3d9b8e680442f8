@@ -1,0 +1,79 @@
+/*
+ * agent.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: liwei
+ */
+#include "agent.h"
+
+Agent::Agent():myEnkiEpuck(new Enki::EPuck(0)), myColor(RobotColor)
+{
+	SensorReading = 0;
+}
+
+unsigned Agent::GetSensorReading()
+{
+	return SensorReading;
+}
+
+void Agent::SetSensorReading(unsigned sensorReading)
+{
+	SensorReading = sensorReading;
+}
+
+const double Agent::GetXCoordinate() const
+{
+	return myEnkiEpuck->pos.x;
+}
+
+
+const double Agent::GetYCoordinate() const
+{
+	return myEnkiEpuck->pos.y;
+}
+
+const double Agent::GetAngle() const
+{
+	return myEnkiEpuck->angle;
+}
+
+const double Agent::GetAngle() const
+{
+	return myEnkiEpuck->angle;
+}
+
+const int Agent::GetColor() const
+{
+	return myColor;
+}
+
+void Agent::SetXCoordinate(double XCoordinate)
+{
+	 myEnkiEpuck->pos.x = XCoordinate;
+}
+
+
+void Agent::SetYCoordinate(double YCoordinate)
+{
+	 myEnkiEpuck->pos.y = YCoordinate;
+}
+
+void Agent::SetAngle(double Angle)
+{
+	 myEnkiEpuck->angle = Angle;
+}
+
+void Agent::SetLeftSpeed(double leftSpeed)
+{
+	 myEnkiEpuck->leftSpeed = leftSpeed;
+}
+
+void Agent::SetRightSpeed(double rightSpeed)
+{
+	 myEnkiEpuck->rightSpeed = rightSpeed;
+}
+
+Enki::EPuck* Agent::GetEpuckPointer()
+{
+	return myEnkiEpuck;
+}
