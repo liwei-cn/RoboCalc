@@ -6,19 +6,22 @@
  */
 #include "agent.h"
 
-Agent::Agent() : myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(0))
+Agent::Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle) : myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(0))
 {
-	SensorReading = 0;
+	mySensorReading = 0;
+	SetXCoordinate(InitialXCoordinate);
+	SetYCoordinate(InitialYCoordinate);
+	SetAngle(InitialAngle);
 }
 
 unsigned Agent::GetSensorReading()
 {
-	return SensorReading;
+	return mySensorReading;
 }
 
 void Agent::SetSensorReading(unsigned sensorReading)
 {
-	SensorReading = sensorReading;
+	mySensorReading = sensorReading;
 }
 
 double Agent::GetXCoordinate() const

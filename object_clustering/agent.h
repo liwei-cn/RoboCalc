@@ -16,7 +16,8 @@
 class Agent : public ObjectInterface
 {
 public:
-	Agent();
+	Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle);
+
 	unsigned GetSensorReading();
 	void SetSensorReading(unsigned sensorReading);
 
@@ -34,7 +35,7 @@ public:
 
 	Enki::EPuck* GetEpuckPointer();
 private:
-	unsigned SensorReading, myColor;
+	unsigned mySensorReading, myColor;
 	double myRadius;
 	Enki::EPuck* myEnkiEpuck;
 };

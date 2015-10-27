@@ -7,8 +7,8 @@ dummy_build_folder := $(shell mkdir -p $(ODIR))
 
 CC = g++
 CFLAGS = -pipe -O2 -Wall -Wextra
-HEADERS = parameters.h agent.h myWorld.h ObjectInterface.h
-_OBJ = main.o agent.o myWorld.o
+HEADERS = parameters.h agent.h object.h myWorld.h ObjectInterface.h 
+_OBJ = main.o agent.o myWorld.o object.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 IDIR = -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
 LDIR = -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer \

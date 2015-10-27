@@ -1,0 +1,60 @@
+/*
+ * object.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: liwei
+ */
+
+#include "object.h"
+
+const double ObjectHeight 10.0
+const double ObjectMass 35.0 // TODO
+const double ObjectDryFrictionCoefficient 0.58 //TODO
+const double ObjectViscousFrictionCoefficient 0.0 //TODO
+
+Object::Object(double InitialXCoordinate, double InitialYCoordinate) : myRadius(ObjectRadius), myColor(ObjectColor), myEnkiPhysicalObject(new Enki::PhysicalObject)
+{
+	SetXCoordinate(InitialXCoordinate);
+	SetYCoordinate(InitialYCoordinate);
+	m_EnkiPhysicalObject->setCylindric(ObjectRadius, ObjectHeight, ObjectMass);
+}
+
+double Object::GetRadius() const
+{
+	return myRadius;
+}
+
+double Object::GetXCoordinate() const
+{
+	return myEnkiPhysicalObject->pos.x;
+}
+
+double Object::GetYCoordinate() const
+{
+	return myEnkiPhysicalObject->pos.y;
+}
+
+double Object::GetAngle() const
+{
+	return myEnkiPhysicalObject->angle;
+}
+
+int Object::GetColor() const
+{
+	return myColor;
+}
+
+void Object::SetXCoordinate(const double XCoordinate)
+{
+	myEnkiPhysicalObject->pos.x = XCoordinate;
+}
+
+void Object::SetYCoordinate(const double YCoordinate)
+{
+	myEnkiPhysicalObject->pos.y = YCoordinate;
+}
+
+Enki::PhysicalObject* Object::GetObjectPointer()
+{
+	return myEnkiPhysicalObject;
+}

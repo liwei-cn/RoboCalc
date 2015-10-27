@@ -9,8 +9,7 @@
 using namespace std;
 
 const int NumberOfAgent = 5;
-const double AreaPerRobot = 10000.0;
-const double EPuckRadius = 3.7;
+const int NumberOfObject = 5;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;
 const int MaximumStepSize = 1000;
@@ -24,6 +23,11 @@ const double ObjectRadius = 5.0;
 const unsigned WallColor = 0;
 const unsigned ObjectColor = 1;
 const unsigned RobotColor = 2;
+
+const double ObjectHeight = 10.0;
+const double ObjectMass = 35.0; // TODO
+const double ObjectDryFrictionCoefficient = 0.58; //TODO
+const double ObjectViscousFrictionCoefficient = 0.1; //TODO
 
 extern gsl_rng *rng;
 

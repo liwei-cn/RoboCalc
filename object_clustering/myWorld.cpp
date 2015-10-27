@@ -13,53 +13,61 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 	Enki::World(width, height, wallsColor), maxSteps(maxSteps)
 {
 	c_step = 0;
+	const double LengthOfSides = ArenaWidth;
 	for (int i = 0; i < (NumberOfAgent); i++){
-		myArrayOfAgents.push_back(new Agent);  //sensor ability: none; noise: 0.05
+
+		double InitialXCoordinate;
+		double InitialYCoordinate;
+		do{
+			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+
+		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, RobotRadius) == true);
+		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
+
+		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));  //sensor ability: none; noise: 0.05
 		addObject(myArrayOfAgents[i]->GetEpuckPointer());
-		myArrayOfItems.push_back(myArrayOfAgents.back());
+		myArrayOfItems.push_back(myArrayOfAgents[i]);
 	}
-	InitializeConfiguration();
-}
 
-void myWorld::InitializeConfiguration()
-{
-
-	for(unsigned i = 0; i < myArrayOfAgents.size(); i++)
+	for (int i = 0; i < NumberOfObject; i++)
 	{
-		double xi;
-		double yi;
-		bool Overlap;
-
+		double InitialXCoordinate;
+		double InitialYCoordinate;
 		do
 		{
-			const double LengthOfSides = ArenaWidth;
-			xi = LengthOfSides*gsl_rng_uniform(rng);
-		    yi = LengthOfSides*gsl_rng_uniform(rng);
-			Overlap = false;
+			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
 
-			for (unsigned j = 0; j < i; j ++ )
-			{
-				double xj = myArrayOfAgents[j]->GetXCoordinate();
-				double yj = myArrayOfAgents[j]->GetYCoordinate();
+		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, ObjectRadius) == true);
 
-				double dij = sqrt(pow(xi - xj, 2.0) + pow(yi - yj, 2.0));
-
-				if (dij < (myArrayOfAgents[i]->GetRadius() + myArrayOfAgents[j]->GetRadius()))
-				{
-					Overlap = true;
-					break;
-				}
-			}
-
-		} while(Overlap == true);
-
-		myArrayOfAgents[i]->SetXCoordinate(xi);
-		myArrayOfAgents[i]->SetYCoordinate(yi);
-		myArrayOfAgents[i]->SetAngle(2.0*M_PI*(gsl_rng_uniform(rng) - 0.5));
+		myArrayOfObjects.push_back(new Object(InitialXCoordinate, InitialYCoordinate));
+		addObject(myArrayOfObjects[i]->GetObjectPointer());
+		myArrayOfItems.push_back(myArrayOfObjects[i]);
 	}
-
 }
 
+bool myWorld::CheckOverlap(const double XCoordinate, const double YCoordinate, const double Radius)
+{
+
+	bool Overlap = false;
+	for(unsigned i = 0; i < myArrayOfItems.size(); i++)
+	{
+		double xj = myArrayOfItems[i]->GetXCoordinate();
+		double yj = myArrayOfItems[i]->GetYCoordinate();
+
+		double dij = sqrt(pow(XCoordinate - xj, 2.0) + pow(YCoordinate - yj, 2.0));
+
+		if (dij < (Radius + myArrayOfItems[i]->GetRadius()))
+		{
+			Overlap = true;
+			break;
+		}
+
+	}
+
+	return Overlap;
+}
 
 void myWorld::UpdateAgentSpeed()
 {
@@ -92,7 +100,7 @@ unsigned myWorld::ComputeSensorReading(const unsigned &Index)
 			const double Side = -sin(ai)*(yi - yj) - cos(ai)*(xi - xj);
 			const double PerpendicularDistance = fabs((yi - yj)*cos(ai) - (xi - xj)*sin(ai));
 
-			if(Side > 0 && PerpendicularDistance <= EPuckRadius)
+			if(Side > 0 && PerpendicularDistance <= RobotRadius)
 			{
 				myArrayOfAgents[Index]->SetSensorReading(1);
 				break;

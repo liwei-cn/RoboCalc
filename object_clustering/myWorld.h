@@ -9,6 +9,7 @@
 #define MYWORLD_H_
 
 #include "agent.h"
+#include "object.h"
 #include <enki/PhysicalEngine.h>
 #include <enki/robots/e-puck/EPuck.h>
 
@@ -17,6 +18,7 @@ class myWorld : public Enki::World
 public:
 	myWorld(double width, double height, const Enki::Color& wallsColor, unsigned maxSteps);
 	void InitializeConfiguration();
+	bool CheckOverlap(const double XCoordinate, const double YCoordinate, const double Radius);
 	void UpdateAgentSpeed();
 	unsigned ComputeSensorReading(const unsigned &Index);
 	bool runStep();
@@ -28,6 +30,7 @@ private:
     unsigned maxSteps;
     unsigned c_step;
     std::vector< Agent* > myArrayOfAgents;
+    std::vector< Object* > myArrayOfObjects;
     std::vector< ObjectInterface* > myArrayOfItems;
 };
 

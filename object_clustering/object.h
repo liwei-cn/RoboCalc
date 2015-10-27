@@ -8,23 +8,28 @@
 #ifndef OBJECT_H_
 #define OBJECT_H_
 
+#include "ObjectInterface.h"
 #include <enki/PhysicalEngine.h>
 #include <enki/robots/e-puck/EPuck.h>
 
-class Object
+class Object : public ObjectInterface
 {
 public:
 
-	Object();
-	const double& GetRadius() const;
-	const double& GetXCoordinate() const;
-	const double& GetYCoordinate() const;
-	const double& GetAngle() const;
-	const int& GetColor() const;
+	Object(double InitialXCoordinate, double InitialYCoordinate);
+
+	double GetRadius() const;
+	double GetXCoordinate() const;
+	double GetYCoordinate() const;
+	double GetAngle() const;
+	int GetColor() const;
+	Enki::PhysicalObject* GetObjectPointer();
+
+	void SetXCoordinate(const double XCoordinate);
+	void SetYCoordinate(const double YCoordinate);
 
 private:
-	Enki::PhysicalObject * myEnkiPhysicalObject;
-
+	Enki::PhysicalObject* myEnkiPhysicalObject;
 	double myRadius;
 	int myColor;
 };

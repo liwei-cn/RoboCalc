@@ -12,7 +12,7 @@
 						<entry kind="includePath" name="/home/liwei/Softwares/enki-master/viewer"/>
 						<entry kind="includePath" name="/usr/include/qt4"/>
 					</resource>
-					<resource project-relative-path="agent.cpp">
+					<resource project-relative-path="object.cpp">
 						<entry kind="includePath" name="/${ProjName}/">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -21,6 +21,14 @@
 						<entry kind="includePath" name="/usr/include/qt4"/>
 					</resource>
 					<resource project-relative-path="main.cpp">
+						<entry kind="includePath" name="/${ProjName}/">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/home/liwei/Softwares/enki-master"/>
+						<entry kind="includePath" name="/home/liwei/Softwares/enki-master/viewer"/>
+						<entry kind="includePath" name="/usr/include/qt4"/>
+					</resource>
+					<resource project-relative-path="agent.cpp">
 						<entry kind="includePath" name="/${ProjName}/">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
