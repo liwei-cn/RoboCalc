@@ -34,7 +34,7 @@ public:
 	void SetLeftSpeed(double leftSpeed);
 	void SetRightSpeed(double rightSpeed);
 
-	void UpdateSensorValue(const std::vector<ObjectInterface*> &ArrayOfItems);
+	void UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems);
 	void UpdateSpeed();
 private:
 	unsigned mySensorReading, myColor;

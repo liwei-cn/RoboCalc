@@ -81,7 +81,7 @@ Enki::EPuck* Agent::GetEpuckPointer()
 	return myEnkiEpuck;
 }
 
-void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> &ArrayOfItems)
+void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems)
 {
 	mySensorReading = WallColor;
 

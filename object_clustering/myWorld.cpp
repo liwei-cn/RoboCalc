@@ -7,13 +7,18 @@
 
 #include "myWorld.h"
 #include "parameters.h"
+#include <sys/time.h>
+#include <sys/stat.h>
 using namespace Enki;
+gsl_rng *rng;
 
 myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned maxSteps) :
 	Enki::World(width, height, wallsColor), maxSteps(maxSteps)
 {
 	c_step = 0;
 	const double LengthOfSides = ArenaWidth;
+	gsl_seed_generator();
+
 	for (int i = 0; i < (NumberOfAgent); i++){
 
 		double InitialXCoordinate;
@@ -45,6 +50,8 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		addObject(myArrayOfObjects[i]->GetObjectPointer());
 		myArrayOfItems.push_back(myArrayOfObjects[i]);
 	}
+
+	gsl_rng_free(rng);
 }
 
 bool myWorld::CheckOverlap(const double XCoordinate, const double YCoordinate, const double Radius)
@@ -77,7 +84,7 @@ void myWorld::UpdateAgentSpeed()
 	}
 }
 
-unsigned myWorld::ComputeSensorReading(const unsigned &Index)
+unsigned myWorld::ComputeSensorReading(const unsigned Index)
 {
 	myArrayOfAgents[Index]->SetSensorReading(0);
 	for(unsigned j = 0; j < myArrayOfAgents.size(); j ++ )
@@ -123,4 +130,17 @@ void myWorld::run()
 	{
 		finished = runStep();
 	}
+}
+
+void myWorld::gsl_seed_generator()
+{
+	unsigned long int Seed;
+	struct timeval tv;
+    struct timezone tz;
+    gettimeofday(&tv,&tz);
+    Seed = tv.tv_sec * 1000000 + tv.tv_usec;
+    rng = gsl_rng_alloc(gsl_rng_default);
+    gsl_rng_set(rng, Seed);
+
+    std::cout << "Seed: " << Seed << std::endl;
 }

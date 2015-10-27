@@ -6,7 +6,6 @@
 #include <sstream>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
-using namespace std;
 
 const int NumberOfAgent = 5;
 const int NumberOfObject = 20;
@@ -28,7 +27,5 @@ const double ObjectHeight = 10.0;
 const double ObjectMass = 35.0; // TODO
 const double ObjectDryFrictionCoefficient = 0.58; //TODO
 const double ObjectViscousFrictionCoefficient = 0.35; //TODO
-
-extern gsl_rng *rng;
 
 #endif

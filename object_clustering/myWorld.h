@@ -10,6 +10,7 @@
 
 #include "agent.h"
 #include "object.h"
+#include "parameters.h"
 #include <enki/PhysicalEngine.h>
 #include <enki/robots/e-puck/EPuck.h>
 
@@ -20,9 +21,10 @@ public:
 	void InitializeConfiguration();
 	bool CheckOverlap(const double XCoordinate, const double YCoordinate, const double Radius);
 	void UpdateAgentSpeed();
-	unsigned ComputeSensorReading(const unsigned &Index);
+	unsigned ComputeSensorReading(const unsigned Index);
 	bool runStep();
 	void run();
+	void gsl_seed_generator();
     /* Extend virtual funtion controlStep, where the dynamics of the world
      * are specified
      * void controlStep(double dt) */

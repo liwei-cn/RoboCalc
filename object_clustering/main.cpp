@@ -1,22 +1,17 @@
+#include "parameters.h"
+#include "agent.h"
+#include "myWorld.h"
+#include "viewer/Viewer.h"
+
 #include <cstdlib>
 #include <cstring>
 #include <sys/time.h>
 #include <sys/stat.h>
 #include <math.h>
-#include "parameters.h"
-#include "agent.h"
-#include "myWorld.h"
-
-#include "viewer/Viewer.h"
 #include <enki/PhysicalEngine.h>
 #include <enki/robots/e-puck/EPuck.h>
 #include <QtGui/QApplication>
 #include <QtGui/QtGui>
-#include <iostream>
-#include <fstream>
-
-gsl_rng *rng;
-void gsl_init();
 
 using namespace Enki;
 using namespace std;
@@ -80,8 +75,6 @@ public:
 
 int main(int argc, char* argv[])
 {
-	gsl_init();
-
 	myWorld m_World(ArenaWidth, ArenaWidth, Color(0.9, 0.9, 0.9), MaximumStepSize);
 
 	if (strcmp(argv[1], "viewer") == 0){
@@ -101,17 +94,4 @@ int main(int argc, char* argv[])
 	}
 }
 
-void gsl_init()
-{
-	gsl_rng_free(rng);
-	unsigned long int Seed;
-	struct timeval tv;
-    struct timezone tz;
-    gettimeofday(&tv,&tz);
-    Seed = tv.tv_sec * 1000000 + tv.tv_usec;
-    rng = gsl_rng_alloc(gsl_rng_default);
-    gsl_rng_set(rng, Seed);
-
-    cout << "Seed: " << Seed << endl;
-}
 
