@@ -1,4 +1,4 @@
-11:43:31 **** Incremental Build of configuration Default for project object_clustering ****
+14:43:52 **** Incremental Build of configuration Default for project object_clustering ****
 make all 
 g++ -c -o obj/main.o main.cpp -pipe -O2 -Wall -Wextra -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
 In file included from /usr/include/c++/4.8/cassert:43:0,
@@ -337,5 +337,5 @@ In file included from object.h:12:0,
                 ^
 g++ -o main obj/main.o obj/agent.o obj/myWorld.o obj/object.o -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer -lenki -lenkiviewer -lgsl -lgslcblas -lm -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL -lX11 -lXext
 
-11:43:34 Build Finished (took 3s.515ms)
+14:43:56 Build Finished (took 3s.525ms)
 

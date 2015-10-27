@@ -80,3 +80,47 @@ Enki::EPuck* Agent::GetEpuckPointer()
 {
 	return myEnkiEpuck;
 }
+
+void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> &ArrayOfItems)
+{
+	mySensorReading = WallColor;
+
+	double MinimumSensingDistance = 1.0/0.0;
+
+	const double ri = myRadius;
+	const double xi = GetXCoordinate();
+	const double yi = GetYCoordinate();
+	const double ai = GetAngle();
+
+	for (unsigned i = 0; i < ArrayOfItems.size(); i++)
+	{
+		if (ArrayOfItems[i] != this)
+		{
+			const double rj = ArrayOfItems[i]->GetRadius();
+			const double xj = ArrayOfItems[i]->GetXCoordinate();
+			const double yj = ArrayOfItems[i]->GetYCoordinate();
+
+			const double side = -sin(ai)*(yi - yj) - cos(ai)*(xi - xj);
+			const double dper = fabs(cos(ai)*(yi - yj) - sin(ai)*(xi - xj));
+
+			if (side > 0 && dper < rj)
+			{
+				const double dij = sqrt(pow(xj - xi, 2.0) + pow(yj - yi, 2.0));
+				const double dsense = sqrt(pow(dij, 2.0) - pow(dper, 2.0)) - sqrt(pow(rj, 2.0) - pow(dper, 2.0)) - ri;  //sensing distance
+
+				if (dsense < MinimumSensingDistance)       //check the nearest item
+				{
+					MinimumSensingDistance = dsense;
+					mySensorReading = ArrayOfItems[i]->GetColor();
+				}
+			}
+		}
+	}
+
+}
+
+void Agent::UpdateSpeed()
+{
+	myEnkiEpuck->leftSpeed = EPuckMaximumSpeed * AgentController[2*mySensorReading];
+	myEnkiEpuck->rightSpeed = EPuckMaximumSpeed * AgentController[2*mySensorReading + 1];
+}

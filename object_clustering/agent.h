@@ -26,6 +26,7 @@ public:
 	virtual double GetAngle() const;
 	virtual double GetRadius() const;
 	virtual int GetColor() const;
+	Enki::EPuck* GetEpuckPointer();
 
 	void SetXCoordinate(double XCoordinate);
 	void SetYCoordinate(double YCoordinate);
@@ -33,7 +34,8 @@ public:
 	void SetLeftSpeed(double leftSpeed);
 	void SetRightSpeed(double rightSpeed);
 
-	Enki::EPuck* GetEpuckPointer();
+	void UpdateSensorValue(const std::vector<ObjectInterface*> &ArrayOfItems);
+	void UpdateSpeed();
 private:
 	unsigned mySensorReading, myColor;
 	double myRadius;

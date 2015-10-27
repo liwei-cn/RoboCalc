@@ -72,15 +72,8 @@ bool myWorld::CheckOverlap(const double XCoordinate, const double YCoordinate, c
 void myWorld::UpdateAgentSpeed()
 {
 	for (unsigned i = 0; i < myArrayOfAgents.size(); i++){
-		int SensorReading = ComputeSensorReading(i);
-		if (SensorReading == 0){
-			myArrayOfAgents[i]->SetLeftSpeed(EPuckMaximumSpeed*AgentController[0]);
-			myArrayOfAgents[i]->SetRightSpeed(EPuckMaximumSpeed*AgentController[1]);
-		}
-		else if (SensorReading == 1){
-			myArrayOfAgents[i]->SetLeftSpeed(EPuckMaximumSpeed*AgentController[2]);
-			myArrayOfAgents[i]->SetRightSpeed(EPuckMaximumSpeed*AgentController[3]);
-		}
+		myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
+		myArrayOfAgents[i]->UpdateSpeed();
 	}
 }
 
