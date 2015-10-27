@@ -92,16 +92,11 @@ bool myWorld::runStep()
 	{
 		step(ControlStepSize, OversamplingRate);
 		c_step++;
-/*
 		if (c_step == 100)
-		{
-			removeObject(myArrayOfAgents[0]->GetEpuckPointer());
-			myArrayOfAgents.erase (myArrayOfAgents.begin());
-			myArrayOfItems.erase(myArrayOfItems.begin());
-		}
+			removeObject(myArrayOfAgents[4]->GetEpuckPointer());
 		std::cout << myArrayOfAgents[4]->GetXCoordinate() << " " << myArrayOfAgents[4]->GetYCoordinate() << std::endl;
 		std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
-*/
+
 		return false;
 	}
 	return true;

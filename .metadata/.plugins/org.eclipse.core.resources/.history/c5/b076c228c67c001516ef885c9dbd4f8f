@@ -8,7 +8,7 @@
 #include <gsl/gsl_randist.h>
 
 const int NumberOfAgent = 5;
-const int NumberOfObject = 10;
+const int NumberOfObject = 5;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;
 const int MaximumStepSize = 5000;

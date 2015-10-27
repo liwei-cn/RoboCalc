@@ -21,6 +21,7 @@ public:
 	void InitializeConfiguration();
 	bool CheckOverlap(const double XCoordinate, const double YCoordinate, const double Radius);
 	void UpdateAgentSpeed();
+	unsigned ComputeSensorReading(const unsigned Index);
 	bool runStep();
 	void run();
 	void gsl_seed_generator();

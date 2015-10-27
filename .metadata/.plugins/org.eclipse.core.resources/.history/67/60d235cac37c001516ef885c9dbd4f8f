@@ -84,6 +84,32 @@ void myWorld::UpdateAgentSpeed()
 	}
 }
 
+unsigned myWorld::ComputeSensorReading(const unsigned Index)
+{
+	myArrayOfAgents[Index]->SetSensorReading(0);
+	for(unsigned j = 0; j < myArrayOfAgents.size(); j ++ )
+		if( j != Index )
+		{
+			const double xi = myArrayOfAgents[Index]->GetXCoordinate();
+			const double yi = myArrayOfAgents[Index]->GetYCoordinate();
+			const double ai = myArrayOfAgents[Index]->GetAngle();
+
+			const double xj = myArrayOfAgents[j]->GetXCoordinate();
+			const double yj = myArrayOfAgents[j]->GetYCoordinate();
+
+			const double Side = -sin(ai)*(yi - yj) - cos(ai)*(xi - xj);
+			const double PerpendicularDistance = fabs((yi - yj)*cos(ai) - (xi - xj)*sin(ai));
+
+			if(Side > 0 && PerpendicularDistance <= RobotRadius)
+			{
+				myArrayOfAgents[Index]->SetSensorReading(1);
+				break;
+			}
+		}
+
+	return myArrayOfAgents[Index]->GetSensorReading();
+}
+
 // returns true if the total simulation period has elapsed
 bool myWorld::runStep()
 {
@@ -92,16 +118,9 @@ bool myWorld::runStep()
 	{
 		step(ControlStepSize, OversamplingRate);
 		c_step++;
-/*
 		if (c_step == 100)
-		{
-			removeObject(myArrayOfAgents[0]->GetEpuckPointer());
-			myArrayOfAgents.erase (myArrayOfAgents.begin());
-			myArrayOfItems.erase(myArrayOfItems.begin());
-		}
-		std::cout << myArrayOfAgents[4]->GetXCoordinate() << " " << myArrayOfAgents[4]->GetYCoordinate() << std::endl;
+			removeObject(myArrayOfObjects[4]->GetObjectPointer());
 		std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
-*/
 		return false;
 	}
 	return true;
