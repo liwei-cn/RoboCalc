@@ -1,0 +1,6 @@
+14:25:34 **** Incremental Build of configuration Default for project aggregation ****
+make all 
+make: Nothing to be done for `all'.
+
+14:25:34 Build Finished (took 89ms)
+

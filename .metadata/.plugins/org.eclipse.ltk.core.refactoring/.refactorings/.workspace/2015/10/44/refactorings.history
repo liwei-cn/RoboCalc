@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;aggregation_behavior&apos; to &apos;aggregation&apos;" description="Rename resource &apos;aggregation_behavior&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/aggregation_behavior" name="aggregation" stamp="1446213636826" updateReferences="true"/>
+</session>
