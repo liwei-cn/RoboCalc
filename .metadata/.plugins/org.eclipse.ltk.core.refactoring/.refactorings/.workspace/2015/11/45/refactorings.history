@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;orbit&apos; to &apos;obstacle_avoidance&apos;" description="Rename resource &apos;orbit&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/orbit" name="obstacle_avoidance" stamp="1446415016062" updateReferences="true"/>
+</session>

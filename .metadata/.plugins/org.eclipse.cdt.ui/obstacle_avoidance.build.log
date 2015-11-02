@@ -1,0 +1,6 @@
+17:12:40 **** Incremental Build of configuration Default for project obstacle_avoidance ****
+make all 
+make: Nothing to be done for `all'.
+
+17:12:40 Build Finished (took 180ms)
+
