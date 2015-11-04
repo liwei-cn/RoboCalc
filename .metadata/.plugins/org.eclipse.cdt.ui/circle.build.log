@@ -1,0 +1,6 @@
+13:07:41 **** Incremental Build of configuration Default for project circle ****
+make all 
+make: Nothing to be done for `all'.
+
+13:07:41 Build Finished (took 69ms)
+
