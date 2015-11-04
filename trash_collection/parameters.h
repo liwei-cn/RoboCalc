@@ -10,7 +10,7 @@
 using namespace std;
 
 const int NumberOfAgent = 1;
-const int NumberOfObject = 1;
+const int NumberOfObject = 2;
 const int NumberOfBasket = 1;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;

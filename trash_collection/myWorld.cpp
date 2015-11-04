@@ -26,16 +26,15 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialXCoordinate;
 		double InitialYCoordinate;
 		do{
-			InitialXCoordinate = LengthOfSides*0.7;
-			InitialYCoordinate = LengthOfSides*0.5;
+			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, RobotRadius) == true);
-//		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
-		double InitialAngle = -M_PI;
+		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
 
 		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));  //sensor ability: none; noise: 0.05
 		addObject(myArrayOfAgents[i]->GetEpuckPointer());
-		myArrayOfItems.push_back(myArrayOfAgents[i]);
+//		myArrayOfItems.push_back(myArrayOfAgents[i]);
 	}
 
 	for (int i = 0; i < NumberOfObject; i++)
@@ -44,8 +43,8 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialYCoordinate;
 		do
 		{
-			InitialXCoordinate = LengthOfSides*0.5;
-			InitialYCoordinate = LengthOfSides*0.5;
+			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, ObjectRadius) == true);
 
@@ -98,15 +97,13 @@ bool myWorld::CheckOverlap(const double XCoordinate, const double YCoordinate, c
 void myWorld::UpdateAgentSpeed()
 {
 	for (unsigned i = 0; i < myArrayOfAgents.size(); i++){
-		myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
+		unsigned object_index = myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
 		myArrayOfAgents[i]->UpdateWheelValue();
-		if ((myArrayOfAgents[i]->CanPickedFlag() == true) && (!myArrayOfObjects.empty()))
+		if (myArrayOfAgents[i]->ClearObject() == true && (!myArrayOfObjects.empty()))
 		{
-			cout << "test" << endl;
-			removeObject(myArrayOfObjects[0]->GetObjectPointer());
-			myArrayOfObjects.erase (myArrayOfObjects.begin());
-			myArrayOfItems.erase(myArrayOfItems.begin()+1);
-			cout << "test" << endl;
+			removeObject(myArrayOfObjects[object_index]->GetObjectPointer());
+			myArrayOfObjects.erase (myArrayOfObjects.begin()+object_index);
+			myArrayOfItems.erase(myArrayOfItems.begin()+object_index);
 //			std::cout << myArrayOfObjects[0]->GetXCoordinate() << " " << myArrayOfObjects[0]->GetYCoordinate() << std::endl;
 //			std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
 

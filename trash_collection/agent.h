@@ -9,18 +9,19 @@
 #define AGENT_H_
 
 #include "ObjectInterface.h"
+#include "object.h"
 #include "parameters.h"
 #include <enki/PhysicalEngine.h>
 #include <enki/robots/e-puck/EPuck.h>
 
-class Agent : public ObjectInterface
+class Agent
 {
 public:
 	Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle);
 
-	unsigned GetSensorReading();
-	void SetSensorReading(unsigned sensorReading);
+	virtual ~Agent() {};
 
+	unsigned GetSensorReading();
 	virtual double GetXCoordinate() const;
 	virtual double GetYCoordinate() const;
 	virtual double GetAngle() const;
@@ -28,20 +29,21 @@ public:
 	virtual int GetColor() const;
 	Enki::EPuck* GetEpuckPointer();
 	double GetInfraredSensorValue(const int index);
-	bool CanPickedFlag();
+	bool ClearObject();
 
+	void SetSensorReading(unsigned sensorReading);
 	void SetXCoordinate(double XCoordinate);
 	void SetYCoordinate(double YCoordinate);
 	void SetAngle(double Angle);
 	void SetLeftSpeed(double leftSpeed);
 	void SetRightSpeed(double rightSpeed);
 
-	void UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems);
+	unsigned UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems);
 	void UpdateWheelValue();
 private:
 	unsigned mySensorReading, myColor;
 	double myRadius;
-	bool canPickedFlag, basketSeenFlag;
+	bool canPickedFlag, basketSeenFlag, clearObject;
 	Enki::EPuck* myEnkiEpuck;
 };
 

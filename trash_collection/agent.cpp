@@ -55,10 +55,11 @@ double Agent::GetRadius() const
 	return myRadius;
 }
 
-bool Agent::CanPickedFlag()
+bool Agent::ClearObject()
 {
-	return canPickedFlag;
+	return clearObject;
 }
+
 void Agent::SetXCoordinate(double XCoordinate)
 {
 	 myEnkiEpuck->pos.x = XCoordinate;
@@ -111,7 +112,7 @@ double Agent::GetInfraredSensorValue(const int index)
 	return 0;
 }
 
-void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems)
+unsigned Agent::UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems)
 {
 	mySensorReading = WallColor;
 
@@ -122,35 +123,37 @@ void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems)
 	const double yi = GetYCoordinate();
 	const double ai = GetAngle();
 
+	unsigned object_index = ArrayOfItems.size() + 1;
+
 	for (unsigned i = 0; i < ArrayOfItems.size(); i++)
 	{
-		if (ArrayOfItems[i] != this)
+		const double rj = ArrayOfItems[i]->GetRadius();
+		const double xj = ArrayOfItems[i]->GetXCoordinate();
+		const double yj = ArrayOfItems[i]->GetYCoordinate();
+
+		const double side = -sin(ai)*(yi - yj) - cos(ai)*(xi - xj);
+		const double dper = fabs(cos(ai)*(yi - yj) - sin(ai)*(xi - xj));
+
+		if (side > 0 && dper < rj)
 		{
-			const double rj = ArrayOfItems[i]->GetRadius();
-			const double xj = ArrayOfItems[i]->GetXCoordinate();
-			const double yj = ArrayOfItems[i]->GetYCoordinate();
+			const double dij = sqrt(pow(xj - xi, 2.0) + pow(yj - yi, 2.0));
+			const double dsense = sqrt(pow(dij, 2.0) - pow(dper, 2.0)) - sqrt(pow(rj, 2.0) - pow(dper, 2.0)) - ri;  //sensing distance
 
-			const double side = -sin(ai)*(yi - yj) - cos(ai)*(xi - xj);
-			const double dper = fabs(cos(ai)*(yi - yj) - sin(ai)*(xi - xj));
-
-			if (side > 0 && dper < rj)
+			if (dsense < MinimumSensingDistance)       //check the nearest item
 			{
-				const double dij = sqrt(pow(xj - xi, 2.0) + pow(yj - yi, 2.0));
-				const double dsense = sqrt(pow(dij, 2.0) - pow(dper, 2.0)) - sqrt(pow(rj, 2.0) - pow(dper, 2.0)) - ri;  //sensing distance
-
-				if (dsense < MinimumSensingDistance)       //check the nearest item
-				{
-					MinimumSensingDistance = dsense;
-					mySensorReading = ArrayOfItems[i]->GetColor();
-				}
+				MinimumSensingDistance = dsense;
+				mySensorReading = ArrayOfItems[i]->GetColor();
+				object_index = i;
 			}
 		}
 	}
 
+	return object_index;
+
 }
 
 /*
-void Agent::UpdateSpeed()
+void Agent::UpdateWheelValue()
 {
 	std::cout << mySensorReading << std::endl;
 	myEnkiEpuck->leftSpeed = EPuckMaximumSpeed * AgentController[2*mySensorReading];
@@ -161,17 +164,19 @@ void Agent::UpdateWheelValue()
 {
 	std::cout << mySensorReading << " " << canPickedFlag << " " << myEnkiEpuck->infraredSensor0.getValue() << " " << myEnkiEpuck->infraredSensor7.getValue() << std::endl;
 
-	myEnkiEpuck->leftSpeed = 0.08*EPuckMaximumSpeed;
-	myEnkiEpuck->rightSpeed = -0.08*EPuckMaximumSpeed;
+	clearObject = false;
+	myEnkiEpuck->leftSpeed = 0.1*EPuckMaximumSpeed;
+	myEnkiEpuck->rightSpeed = -0.1*EPuckMaximumSpeed;
 
 	if (mySensorReading == 1 && canPickedFlag == 0)
 	{
 		myEnkiEpuck->leftSpeed = EPuckMaximumSpeed;
 		myEnkiEpuck->rightSpeed = EPuckMaximumSpeed;
-		if (myEnkiEpuck->infraredSensor0.getValue() > 500 || myEnkiEpuck->infraredSensor7.getValue() > 500)
+		if (myEnkiEpuck->infraredSensor0.getValue() > 1000 || myEnkiEpuck->infraredSensor7.getValue() > 1000)
 		{
 			canPickedFlag = 1;
 			myEnkiEpuck->setLedRing(1);
+			clearObject = true;
 		}
 	}
 
@@ -179,13 +184,11 @@ void Agent::UpdateWheelValue()
 	{
 		myEnkiEpuck->leftSpeed = EPuckMaximumSpeed;
 		myEnkiEpuck->rightSpeed = EPuckMaximumSpeed;
-		if (myEnkiEpuck->infraredSensor0.getValue() > 300 || myEnkiEpuck->infraredSensor7.getValue() > 300)
+		if (myEnkiEpuck->infraredSensor0.getValue() > 1000 || myEnkiEpuck->infraredSensor7.getValue() > 1000)
 		{
 			canPickedFlag = 0;
 			myEnkiEpuck->setLedRing(0);
 		}
 	}
-	cout << "test2" << endl;
-	std::cout << myEnkiEpuck->leftSpeed/EPuckMaximumSpeed << " " << myEnkiEpuck->rightSpeed/EPuckMaximumSpeed << " " << std::endl;
-	cout << "test2" << endl;
+
 }

@@ -9,7 +9,7 @@
 #include "parameters.h"
 
 Basket::Basket(double InitialXCoordinate, double InitialYCoordinate):
-myColor(BasketColor), myRadius(BasketRadius)
+myRadius(BasketRadius),myColor(BasketColor)
 {
 	myEnkiPhysicalObject = new Enki::PhysicalObject;
 	myEnkiPhysicalObject->setCylindric(BasketRadius, BasketHeight, BasketMass);
