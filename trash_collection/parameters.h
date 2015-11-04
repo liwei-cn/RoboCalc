@@ -7,12 +7,14 @@
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 
+using namespace std;
+
 const int NumberOfAgent = 1;
 const int NumberOfObject = 1;
 const int NumberOfBasket = 1;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;
-const int MaximumStepSize = 5000;
+const int MaximumStepSize = 10000;
 const int OversamplingRate = 10;
 const int ArenaWidth = 100;
 const double AgentController[8] = {0.08, -0.08, 1.0, 1.0, 0.1, 0.5,1.0,1.0};

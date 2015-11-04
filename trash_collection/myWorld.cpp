@@ -9,8 +9,10 @@
 #include "parameters.h"
 #include <sys/time.h>
 #include <sys/stat.h>
-using namespace Enki;
+
 gsl_rng *rng;
+using namespace Enki;
+using namespace std;
 
 myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned maxSteps) :
 	Enki::World(width, height, wallsColor), maxSteps(maxSteps)
@@ -24,11 +26,12 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialXCoordinate;
 		double InitialYCoordinate;
 		do{
-			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
-			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialXCoordinate = LengthOfSides*0.7;
+			InitialYCoordinate = LengthOfSides*0.5;
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, RobotRadius) == true);
-		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
+//		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
+		double InitialAngle = -M_PI;
 
 		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));  //sensor ability: none; noise: 0.05
 		addObject(myArrayOfAgents[i]->GetEpuckPointer());
@@ -41,8 +44,8 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialYCoordinate;
 		do
 		{
-			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
-			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialXCoordinate = LengthOfSides*0.5;
+			InitialYCoordinate = LengthOfSides*0.5;
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, ObjectRadius) == true);
 
@@ -57,7 +60,7 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialYCoordinate;
 		do
 		{
-			InitialXCoordinate = LengthOfSides*0.1;
+			InitialXCoordinate = LengthOfSides*0.9;
 			InitialYCoordinate = LengthOfSides*0.1;
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, BasketRadius) == true);
@@ -96,16 +99,18 @@ void myWorld::UpdateAgentSpeed()
 {
 	for (unsigned i = 0; i < myArrayOfAgents.size(); i++){
 		myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
-		if (myArrayOfAgents[i]->GetInfraredSensorValue(0) > 1000 || myArrayOfAgents[i]->GetInfraredSensorValue(1) > 1000)
+		myArrayOfAgents[i]->UpdateWheelValue();
+		if ((myArrayOfAgents[i]->CanPickedFlag() == true) && (!myArrayOfObjects.empty()))
 		{
+			cout << "test" << endl;
 			removeObject(myArrayOfObjects[0]->GetObjectPointer());
 			myArrayOfObjects.erase (myArrayOfObjects.begin());
 			myArrayOfItems.erase(myArrayOfItems.begin()+1);
+			cout << "test" << endl;
 //			std::cout << myArrayOfObjects[0]->GetXCoordinate() << " " << myArrayOfObjects[0]->GetYCoordinate() << std::endl;
 //			std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
 
 		}
-		myArrayOfAgents[i]->UpdateWheelValue();
 	}
 }
 

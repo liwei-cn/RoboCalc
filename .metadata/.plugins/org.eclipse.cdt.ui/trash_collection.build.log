@@ -1,6 +1,6 @@
-12:02:19 **** Incremental Build of configuration Default for project trash_collection ****
+13:20:22 **** Incremental Build of configuration Default for project trash_collection ****
 make all 
 make: Nothing to be done for `all'.
 
-12:02:19 Build Finished (took 56ms)
+13:20:22 Build Finished (took 85ms)
 

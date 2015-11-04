@@ -28,6 +28,7 @@ public:
 	virtual int GetColor() const;
 	Enki::EPuck* GetEpuckPointer();
 	double GetInfraredSensorValue(const int index);
+	bool CanPickedFlag();
 
 	void SetXCoordinate(double XCoordinate);
 	void SetYCoordinate(double YCoordinate);
@@ -40,7 +41,7 @@ public:
 private:
 	unsigned mySensorReading, myColor;
 	double myRadius;
-	unsigned canPickedFlag, basketSeenFlag;
+	bool canPickedFlag, basketSeenFlag;
 	Enki::EPuck* myEnkiEpuck;
 };
 

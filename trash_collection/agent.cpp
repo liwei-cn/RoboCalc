@@ -55,6 +55,10 @@ double Agent::GetRadius() const
 	return myRadius;
 }
 
+bool Agent::CanPickedFlag()
+{
+	return canPickedFlag;
+}
 void Agent::SetXCoordinate(double XCoordinate)
 {
 	 myEnkiEpuck->pos.x = XCoordinate;
@@ -155,38 +159,33 @@ void Agent::UpdateSpeed()
 
 void Agent::UpdateWheelValue()
 {
-	std::cout << mySensorReading << " " << myEnkiEpuck->infraredSensor0.getValue() << " " << myEnkiEpuck->infraredSensor1.getValue() << std::endl;
+	std::cout << mySensorReading << " " << canPickedFlag << " " << myEnkiEpuck->infraredSensor0.getValue() << " " << myEnkiEpuck->infraredSensor7.getValue() << std::endl;
 
-	if (mySensorReading == 0 && canPickedFlag == 0)
-	{
-		myEnkiEpuck->leftSpeed = 0.08*EPuckMaximumSpeed;
-		myEnkiEpuck->rightSpeed = -0.08*EPuckMaximumSpeed;
-	}
+	myEnkiEpuck->leftSpeed = 0.08*EPuckMaximumSpeed;
+	myEnkiEpuck->rightSpeed = -0.08*EPuckMaximumSpeed;
 
-	else if (mySensorReading == 1 && canPickedFlag == 0 && (myEnkiEpuck->infraredSensor0.getValue() < 100 || myEnkiEpuck->infraredSensor1.getValue() < 100))
+	if (mySensorReading == 1 && canPickedFlag == 0)
 	{
 		myEnkiEpuck->leftSpeed = EPuckMaximumSpeed;
 		myEnkiEpuck->rightSpeed = EPuckMaximumSpeed;
+		if (myEnkiEpuck->infraredSensor0.getValue() > 500 || myEnkiEpuck->infraredSensor7.getValue() > 500)
+		{
+			canPickedFlag = 1;
+			myEnkiEpuck->setLedRing(1);
+		}
 	}
 
-//	else if (mySensorReading == 1 && (myEnkiEpuck->infraredSensor0.getValue() > 1000 || myEnkiEpuck->infraredSensor1.getValue() > 1000) && canPickedFlag == 0)
-//	{
-//		canPickedFlag = 1;
-//		myEnkiEpuck->leftSpeed = -0.1*EPuckMaximumSpeed;
-//		myEnkiEpuck->rightSpeed = 1.0*EPuckMaximumSpeed;
-//	}
-//
-//	else if (canPickedFlag == 1 && mySensorReading == 3 && (myEnkiEpuck->infraredSensor0.getValue() < 100))
-//	{
-//		myEnkiEpuck->leftSpeed = EPuckMaximumSpeed;
-//		myEnkiEpuck->rightSpeed = EPuckMaximumSpeed;
-//	}
-//
-//	else if ((canPickedFlag == 1) && mySensorReading == 2 && (myEnkiEpuck->infraredSensor0.getValue() > 1000))
-//	{
-//		myEnkiEpuck->leftSpeed = 0;
-//		myEnkiEpuck->rightSpeed = 0;
-//		canPickedFlag = 0;
-//	}
-
+	if (canPickedFlag == 1 && mySensorReading == 3)
+	{
+		myEnkiEpuck->leftSpeed = EPuckMaximumSpeed;
+		myEnkiEpuck->rightSpeed = EPuckMaximumSpeed;
+		if (myEnkiEpuck->infraredSensor0.getValue() > 300 || myEnkiEpuck->infraredSensor7.getValue() > 300)
+		{
+			canPickedFlag = 0;
+			myEnkiEpuck->setLedRing(0);
+		}
+	}
+	cout << "test2" << endl;
+	std::cout << myEnkiEpuck->leftSpeed/EPuckMaximumSpeed << " " << myEnkiEpuck->rightSpeed/EPuckMaximumSpeed << " " << std::endl;
+	cout << "test2" << endl;
 }

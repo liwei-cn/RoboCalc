@@ -5983,3 +5983,24 @@ Binding(CTRL+SHIFT+H,
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-11-04 12:00:31.666
 !MESSAGE Indexed 'trash_collection' (5 sources, 163 headers) in 19.72 sec: 12,518 declarations; 22,079 references; 13 unresolved inclusions; 0 syntax errors; 207 unresolved names (0.59%)
+
+!ENTRY org.eclipse.jface 2 0 2015-11-04 12:24:13.949
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-11-04 12:24:13.949
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c66c8d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@400b57c1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
