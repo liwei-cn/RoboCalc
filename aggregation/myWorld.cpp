@@ -9,6 +9,8 @@
 #include "parameters.h"
 #include <sys/time.h>
 #include <sys/stat.h>
+#include <gsl/gsl_rng.h>
+#include <gsl/gsl_randist.h>
 using namespace Enki;
 gsl_rng *rng;
 
@@ -16,9 +18,9 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 	Enki::World(width, height, wallsColor), maxSteps(maxSteps)
 {
 	c_step = 0;
-	const double LengthOfSides = ArenaWidth;
 	gsl_seed_generator();
-
+	const double LengthOfSides = ArenaWidth;
+	//initialize N (NumberOfAgent) agents with random position and orientation
 	for (int i = 0; i < (NumberOfAgent); i++){
 
 		double InitialXCoordinate;
@@ -30,8 +32,8 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, RobotRadius) == true);
 		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
 
-		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));  //sensor ability: none; noise: 0.05
-		addObject(myArrayOfAgents[i]->GetEpuckPointer());
+		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));
+		addObject(myArrayOfAgents[i]->GetEpuckPointer());       //add an e-puck robot into the simulation world
 		myArrayOfItems.push_back(myArrayOfAgents[i]);
 	}
 
@@ -71,21 +73,11 @@ void myWorld::UpdateAgentSpeed()
 // returns true if the total simulation period has elapsed
 bool myWorld::runStep()
 {
-	UpdateAgentSpeed();
+	UpdateAgentSpeed();  //each robot (agent)'s speed is set in every control cycle (ControlStepSize)
 	if (c_step != maxSteps)
 	{
-		step(ControlStepSize, OversamplingRate);
+		step(ControlStepSize, OversamplingRate);  //the physics is updated at a rate of 10 (OversamplingRate) times per control cycle
 		c_step++;
-/*
-		if (c_step == 100)
-		{
-			removeObject(myArrayOfAgents[0]->GetEpuckPointer());
-			myArrayOfAgents.erase (myArrayOfAgents.begin());
-			myArrayOfItems.erase(myArrayOfItems.begin());
-		}
-		std::cout << myArrayOfAgents[4]->GetXCoordinate() << " " << myArrayOfAgents[4]->GetYCoordinate() << std::endl;
-		std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
-*/
 		return false;
 	}
 	return true;

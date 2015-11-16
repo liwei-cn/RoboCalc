@@ -1,6 +1,0 @@
-17:52:36 **** Incremental Build of configuration Default for project argos3-examples ****
-make all 
-make: *** No rule to make target `all'.  Stop.
-
-17:52:36 Build Finished (took 61ms)
-

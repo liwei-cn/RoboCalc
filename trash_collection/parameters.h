@@ -10,7 +10,7 @@
 using namespace std;
 
 const int NumberOfAgent = 1;
-const int NumberOfObject = 2;
+const int NumberOfObject = 1;
 const int NumberOfBasket = 1;
 const double EPuckMaximumSpeed = 12.8;
 const double ControlStepSize = 0.1;
@@ -22,6 +22,9 @@ const double AgentController[8] = {0.08, -0.08, 1.0, 1.0, 0.1, 0.5,1.0,1.0};
 const double RobotRadius = 3.7;
 const double ObjectRadius = 5.0;
 const double BasketRadius = 10.0;
+
+const double CameraRange = 140.0;
+const double CameraFieldOfView = 3.1415926/3;
 
 const unsigned WallColor = 0;
 const unsigned ObjectColor = 1;

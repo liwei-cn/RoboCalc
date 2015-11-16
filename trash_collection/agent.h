@@ -37,6 +37,7 @@ public:
 	void SetAngle(double Angle);
 	void SetLeftSpeed(double leftSpeed);
 	void SetRightSpeed(double rightSpeed);
+	void OuputCameraInfro();
 
 	unsigned UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems);
 	void UpdateWheelValue();

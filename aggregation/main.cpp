@@ -29,7 +29,7 @@ public:
 		timeMultiplier(timeMultiplier)
 	{
 		myworld = world;
-		timerId = startTimer(100);  //0.1s timer
+		timerId = startTimer(100);
         // Define viewer camera position and altitudes
         altitude= world->h;
         pos = QPointF(-world->w * 0.5, -world->h * 0);
@@ -42,7 +42,7 @@ public:
 			bool finished = false;
 			for (unsigned i = 0; i < timeMultiplier; i++)
 			{
-				finished =  myworld->runStep();
+				finished =  myworld->runStep();         //update very control cycle
 				if (finished)
 					break;
 			}
@@ -75,6 +75,7 @@ public:
 
 int main(int argc, char* argv[])
 {
+	unsigned MaximumStepSize = atoi(argv[2]);       //maximum number of time steps (cycles)
 	myWorld m_World(ArenaWidth, ArenaWidth, Color(0.9, 0.9, 0.9), MaximumStepSize);
 
 	if (strcmp(argv[1], "viewer") == 0){

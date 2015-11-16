@@ -10,9 +10,10 @@ CFLAGS = -pipe -O2 -Wall -Wextra
 HEADERS = parameters.h agent.h myWorld.h ObjectInterface.h 
 _OBJ = main.o agent.o myWorld.o 
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
-IDIR = -I. -I/home/liwei/Softwares/enki-master    -I/home/liwei/Softwares/enki-master/viewer -I/usr/include/qt4
+IDIR = -I. -I/home/liwei/Softwares/enki-master -I/home/liwei/Softwares/enki-master/viewer \
+		-I/usr/include/qt4 -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtOpenGL
 LDIR = -L. -L/home/liwei/Softwares/enki-master/enki -L/home/liwei/Softwares/enki-master/viewer \
-	   -lenki -lenkiviewer -lgsl -lgslcblas -lm -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL -lX11 -lXext
+	   -lenki -lenkiviewer -lgsl -lgslcblas -lQtOpenGL -lQtGui -lQtCore -lGLU -lGL
 OUT = main
 	
 all: $(OUT) 

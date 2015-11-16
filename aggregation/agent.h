@@ -18,16 +18,15 @@ class Agent : public ObjectInterface
 public:
 	Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle);
 
-	unsigned GetSensorReading();
-	void SetSensorReading(unsigned sensorReading);
-
 	virtual double GetXCoordinate() const;
 	virtual double GetYCoordinate() const;
 	virtual double GetAngle() const;
 	virtual double GetRadius() const;
 	virtual int GetColor() const;
 	Enki::EPuck* GetEpuckPointer();
+	unsigned GetSensorReading();
 
+	void SetSensorReading(unsigned sensorReading);
 	void SetXCoordinate(double XCoordinate);
 	void SetYCoordinate(double YCoordinate);
 	void SetAngle(double Angle);
@@ -36,6 +35,7 @@ public:
 
 	void UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems);
 	void UpdateSpeed();
+
 private:
 	unsigned mySensorReading, myColor;
 	double myRadius;

@@ -6,9 +6,10 @@
  */
 #include "agent.h"
 
-Agent::Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle) : myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(0))
+Agent::Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle) :
+	myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(0))
 {
-	mySensorReading = 0;
+	mySensorReading = WallColor;
 	SetXCoordinate(InitialXCoordinate);
 	SetYCoordinate(InitialYCoordinate);
 	SetAngle(InitialAngle);
@@ -83,11 +84,11 @@ Enki::EPuck* Agent::GetEpuckPointer()
 
 void Agent::UpdateSensorValue(const std::vector<ObjectInterface*> ArrayOfItems)
 {
-	mySensorReading = WallColor;
+	mySensorReading = WallColor;   //default: see nothing (or the wall)
 
 	double MinimumSensingDistance = 1.0/0.0;
 
-	const double ri = myRadius;
+	const double ri = GetRadius();
 	const double xi = GetXCoordinate();
 	const double yi = GetYCoordinate();
 	const double ai = GetAngle();

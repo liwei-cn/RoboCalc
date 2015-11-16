@@ -7,7 +7,8 @@
 #include "agent.h"
 
 Agent::Agent(double InitialXCoordinate, double InitialYCoordinate, double InitialAngle):
-myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(Enki::EPuck::CAPABILITY_BASIC_SENSORS))
+myColor(RobotColor), myRadius(RobotRadius),
+myEnkiEpuck(new Enki::EPuck(Enki::EPuck::CAPABILITY_CAMERA | Enki::EPuck::CAPABILITY_BASIC_SENSORS))
 {
 	mySensorReading = 0;
 	basketSeenFlag = 0;
@@ -17,6 +18,8 @@ myColor(RobotColor), myRadius(RobotRadius), myEnkiEpuck(new Enki::EPuck(Enki::EP
 	SetAngle(InitialAngle);
 	SetLeftSpeed(0);
 	SetRightSpeed(0);
+	myEnkiEpuck->camera.setRange(CameraRange);           //Camera range; default: unlimited
+	myEnkiEpuck->camera.halfFieldOfView = CameraFieldOfView/2;                          // Camera half field of view
 }
 
 unsigned Agent::GetSensorReading()
@@ -190,5 +193,20 @@ void Agent::UpdateWheelValue()
 			myEnkiEpuck->setLedRing(0);
 		}
 	}
-
 }
+
+
+void Agent::OuputCameraInfro()
+{
+    for (unsigned i = 0; i < 30 ; i++)
+    {
+    	cout << myEnkiEpuck->camera.image[i].r() << " ";
+    	cout << myEnkiEpuck->camera.image[i].g() << " ";
+    	cout << myEnkiEpuck->camera.image[i].b() << " ";
+    }
+    cout << endl;
+
+    cout << myEnkiEpuck->camera.getAbsolutePosition().x << " " << myEnkiEpuck->camera.getAbsolutePosition().y << endl;
+    cout << myEnkiEpuck->camera.getAbsoluteOrientation() << endl;
+}
+

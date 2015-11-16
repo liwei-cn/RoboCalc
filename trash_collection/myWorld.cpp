@@ -26,11 +26,12 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialXCoordinate;
 		double InitialYCoordinate;
 		do{
-			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
-			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialXCoordinate = LengthOfSides*0.7;
+			InitialYCoordinate = LengthOfSides*0.5;
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, RobotRadius) == true);
-		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
+//		double InitialAngle = 2.0*M_PI*(gsl_rng_uniform(rng) - 0.5);
+		double InitialAngle = -M_PI;
 
 		myArrayOfAgents.push_back(new Agent(InitialXCoordinate, InitialYCoordinate, InitialAngle));  //sensor ability: none; noise: 0.05
 		addObject(myArrayOfAgents[i]->GetEpuckPointer());
@@ -43,8 +44,8 @@ myWorld::myWorld(double width, double height, const Color& wallsColor, unsigned 
 		double InitialYCoordinate;
 		do
 		{
-			InitialXCoordinate = LengthOfSides*gsl_rng_uniform(rng);
-			InitialYCoordinate = LengthOfSides*gsl_rng_uniform(rng);
+			InitialXCoordinate = LengthOfSides*0.5;
+			InitialYCoordinate = LengthOfSides*0.5;
 
 		} while (CheckOverlap(InitialXCoordinate, InitialYCoordinate, ObjectRadius) == true);
 
@@ -97,9 +98,10 @@ bool myWorld::CheckOverlap(const double XCoordinate, const double YCoordinate, c
 void myWorld::UpdateAgentSpeed()
 {
 	for (unsigned i = 0; i < myArrayOfAgents.size(); i++){
-		unsigned object_index = myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
-		myArrayOfAgents[i]->UpdateWheelValue();
-		if (myArrayOfAgents[i]->ClearObject() == true && (!myArrayOfObjects.empty()))
+		myArrayOfAgents[i]->OuputCameraInfro();
+//		unsigned object_index = myArrayOfAgents[i]->UpdateSensorValue(myArrayOfItems);
+//		myArrayOfAgents[i]->UpdateWheelValue();
+/*		if (myArrayOfAgents[i]->ClearObject() == true && (!myArrayOfObjects.empty()))
 		{
 			removeObject(myArrayOfObjects[object_index]->GetObjectPointer());
 			myArrayOfObjects.erase (myArrayOfObjects.begin()+object_index);
@@ -107,7 +109,7 @@ void myWorld::UpdateAgentSpeed()
 //			std::cout << myArrayOfObjects[0]->GetXCoordinate() << " " << myArrayOfObjects[0]->GetYCoordinate() << std::endl;
 //			std::cout << myArrayOfAgents.size() << myArrayOfObjects.size() << myArrayOfItems.size() << std::endl;
 
-		}
+		}*/
 	}
 }
 
