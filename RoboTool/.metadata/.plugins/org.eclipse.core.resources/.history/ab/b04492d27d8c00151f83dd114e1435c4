@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pi:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms" visible="true" gridUnit="10" diagramTypeId="RoboCalc" name="FixedTrajectory.rcd" snapToGrid="true" pictogramLinks="//@children.0/@link //@children.0/@children.0/@link //@children.0/@children.2/@children.0/@link //@children.0/@children.2/@children.1/@link //@children.0/@children.2/@children.2/@link //@children.1/@link //@children.1/@children.0/@link //@children.1/@children.2/@link //@children.1/@children.4/@link //@children.1/@children.6/@link //@children.1/@children.2/@children.0/@link //@children.1/@children.2/@children.0/@children.0/@link //@children.1/@children.2/@children.0/@children.2/@link //@children.1/@children.2/@children.0/@children.4/@link //@children.1/@children.2/@children.1/@link //@children.1/@children.2/@children.1/@children.0/@link //@children.1/@children.2/@children.1/@children.2/@link //@children.1/@children.2/@children.1/@children.4/@link //@children.1/@children.2/@children.1/@children.2/@children.0/@link //@children.1/@children.2/@children.0/@children.2/@children.0/@link //@connections.0/@connectionDecorators.0/@link //@connections.0/@link //@children.1/@children.2/@children.2/@link //@children.1/@children.2/@children.2/@children.0/@link //@children.1/@children.2/@children.2/@children.2/@link //@children.1/@children.2/@children.2/@children.4/@link //@children.1/@children.2/@children.2/@children.2/@children.0/@link //@children.1/@children.2/@children.3/@link //@children.1/@children.2/@children.3/@children.0/@link //@children.1/@children.2/@children.3/@children.2/@link //@children.1/@children.2/@children.3/@children.4/@link //@children.1/@children.2/@children.3/@children.2/@children.0/@link //@children.1/@children.2/@children.4/@link //@children.1/@children.2/@children.4/@children.0/@link //@children.1/@children.2/@children.4/@children.2/@link //@children.1/@children.2/@children.4/@children.4/@link //@children.1/@children.2/@children.4/@children.2/@children.0/@link //@connections.1/@connectionDecorators.0/@link //@connections.1/@link //@connections.2/@connectionDecorators.0/@link //@connections.2/@link //@connections.3/@connectionDecorators.0/@link //@connections.3/@link //@children.1/@children.2/@children.5/@link //@connections.4/@connectionDecorators.0/@link //@connections.4/@link //@children.1/@children.2/@children.6/@link //@connections.5/@connectionDecorators.0/@link //@connections.5/@link //@children.2/@link //@children.2/@children.0/@link //@children.2/@children.2/@link //@children.2/@children.4/@link //@children.2/@children.6/@link //@connections.6/@link //@connections.6/@connectionDecorators.0/@link //@children.3/@link //@connections.7/@link //@connections.7/@connectionDecorators.0/@link //@children.4/@link" version="0.12.0">
+  <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.1" foreground="//@colors.0" lineWidth="1" transparency="0.0" width="1000" height="1000"/>
+  <link>
+    <businessObjects href="FixedTrajectory.rcm#/"/>
+  </link>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="id" value="interface"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" transparency="0.0" width="171" height="171" x="569" y="90">
+      <renderingStyle>
+        <adaptedGradientColoredAreas definedStyleId="silver-white-gloss" gradientType="0">
+          <adaptedGradientColoredAreas styleAdaption="0">
+            <gradientColor>
+              <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                <color red="238" green="238" blue="237"/>
+              </start>
+              <end locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="1">
+                <color red="238" green="238" blue="237"/>
+              </end>
+            </gradientColor>
+            <gradientColor>
+              <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="1">
+                <color red="225" green="225" blue="224"/>
+              </start>
+              <end locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="2">
+                <color red="225" green="225" blue="224"/>
+              </end>
+            </gradientColor>
+            <gradientColor>
+              <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="2">
+                <color red="210" green="209" blue="207"/>
+              </start>
+              <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="2">
+                <color red="242" green="240" blue="239"/>
+              </end>
+            </gradientColor>
+            <gradientColor>
+              <start locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="2">
+                <color red="223" green="222" blue="221"/>
+              </start>
+              <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                <color red="223" green="222" blue="221"/>
+              </end>
+            </gradientColor>
+          </adaptedGradientColoredAreas>
+        </adaptedGradientColoredAreas>
+      </renderingStyle>
+    </graphicsAlgorithm>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+    </link>
+    <anchors xsi:type="pi:ChopboxAnchor"/>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="171" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="FixedTrajectory"/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <points y="20"/>
+        <points x="171" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" height="60" y="20"/>
+      <children visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="161" height="20" x="5" y="20" value="NewOperation(): void"/>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@interfaces.0/@operations.0"/>
+        </link>
+      </children>
+      <children visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="161" height="20" x="5" y="40" value="NewOperation1(): void"/>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@interfaces.0/@operations.1"/>
+        </link>
+      </children>
+      <children visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="161" height="20" x="5" y="60" value="NewOperation2(): void"/>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@interfaces.0/@operations.2"/>
+        </link>
+      </children>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+        <points y="80"/>
+        <points x="171" y="80"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" height="20" y="80"/>
+    </children>
+  </children>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="401" height="271" x="310" y="305">
+      <properties key="org.eclipse.graphiti.pattern.id.id" value="stmOuterRectangle"/>
+      <graphicsAlgorithmChildren xsi:type="al:Rectangle" lineWidth="1" filled="true" transparency="0.0" width="401" height="271">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmMainRectangle"/>
+        <renderingStyle>
+          <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+            <adaptedGradientColoredAreas styleAdaption="0">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="254" green="254" blue="244"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="254" green="254" blue="244"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+            <adaptedGradientColoredAreas styleAdaption="1">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="229" green="229" blue="194"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="229" green="229" blue="194"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+            <adaptedGradientColoredAreas styleAdaption="2">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="250" green="250" blue="217"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="250" green="250" blue="217"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+          </adaptedGradientColoredAreas>
+        </renderingStyle>
+      </graphicsAlgorithmChildren>
+    </graphicsAlgorithm>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1"/>
+    </link>
+    <anchors xsi:type="pi:ChopboxAnchor"/>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="401" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="State Machine">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmNameText"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmNameSeparator"/>
+        <points y="20"/>
+        <points x="401" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="401" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmOperationNamesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1"/>
+      </link>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+        <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="50" x="50" y="56">
+          <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEouterRectangle"/>
+          <graphicsAlgorithmChildren xsi:type="al:Rectangle" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="111" height="50">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEmainRectangle"/>
+            <renderingStyle>
+              <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+                <adaptedGradientColoredAreas styleAdaption="0">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="1">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="2">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+              </adaptedGradientColoredAreas>
+            </renderingStyle>
+          </graphicsAlgorithmChildren>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.0"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.0" incomingConnections="//@connections.5"/>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="111" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="S1">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEstateNameText"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.0"/>
+          </link>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnameSeparator"/>
+            <points y="20"/>
+            <points x="111" y="20"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="20" y="20">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.0"/>
+          </link>
+          <children visible="true" active="true">
+            <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="101" height="20" x="5" y="20" value="during skip">
+              <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionText"/>
+              <properties key="org.eclipse.graphiti.pattern.id.index" value="0"/>
+            </graphicsAlgorithm>
+            <link>
+              <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.0/@actions.0"/>
+            </link>
+          </children>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEoperationsSeparator"/>
+            <points y="40"/>
+            <points x="111" y="40"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="10" y="40">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnodesRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.0"/>
+          </link>
+        </children>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+        <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="50" x="250" y="56">
+          <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEouterRectangle"/>
+          <graphicsAlgorithmChildren xsi:type="al:Rectangle" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="100" height="50">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEmainRectangle"/>
+            <renderingStyle>
+              <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+                <adaptedGradientColoredAreas styleAdaption="0">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="1">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="2">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+              </adaptedGradientColoredAreas>
+            </renderingStyle>
+          </graphicsAlgorithmChildren>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.1"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.1" incomingConnections="//@connections.0"/>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="100" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="S2">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEstateNameText"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.1"/>
+          </link>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnameSeparator"/>
+            <points y="20"/>
+            <points x="100" y="20"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="20" y="20">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.1"/>
+          </link>
+          <children visible="true" active="true">
+            <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="90" height="20" x="5" y="20" value="during skip">
+              <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionText"/>
+              <properties key="org.eclipse.graphiti.pattern.id.index" value="0"/>
+            </graphicsAlgorithm>
+            <link>
+              <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.1/@actions.0"/>
+            </link>
+          </children>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEoperationsSeparator"/>
+            <points y="40"/>
+            <points x="100" y="40"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="10" y="40">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnodesRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.1"/>
+          </link>
+        </children>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+        <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="50" x="250" y="136">
+          <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEouterRectangle"/>
+          <graphicsAlgorithmChildren xsi:type="al:Rectangle" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="100" height="50">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEmainRectangle"/>
+            <renderingStyle>
+              <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+                <adaptedGradientColoredAreas styleAdaption="0">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="1">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="2">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+              </adaptedGradientColoredAreas>
+            </renderingStyle>
+          </graphicsAlgorithmChildren>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.2"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.2" incomingConnections="//@connections.1"/>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="100" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="S3">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEstateNameText"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.2"/>
+          </link>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnameSeparator"/>
+            <points y="20"/>
+            <points x="100" y="20"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="20" y="20">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.2"/>
+          </link>
+          <children visible="true" active="true">
+            <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="90" height="20" x="5" y="20" value="during skip">
+              <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionText"/>
+              <properties key="org.eclipse.graphiti.pattern.id.index" value="0"/>
+            </graphicsAlgorithm>
+            <link>
+              <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.2/@actions.0"/>
+            </link>
+          </children>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEoperationsSeparator"/>
+            <points y="40"/>
+            <points x="100" y="40"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="100" height="10" y="40">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnodesRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.2"/>
+          </link>
+        </children>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+        <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="50" x="50" y="136">
+          <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEouterRectangle"/>
+          <graphicsAlgorithmChildren xsi:type="al:Rectangle" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="111" height="50">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEmainRectangle"/>
+            <renderingStyle>
+              <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+                <adaptedGradientColoredAreas styleAdaption="0">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="1">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="2">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+              </adaptedGradientColoredAreas>
+            </renderingStyle>
+          </graphicsAlgorithmChildren>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.3"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.3" incomingConnections="//@connections.2"/>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="111" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="S4">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEstateNameText"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.3"/>
+          </link>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnameSeparator"/>
+            <points y="20"/>
+            <points x="111" y="20"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="20" y="20">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.3"/>
+          </link>
+          <children visible="true" active="true">
+            <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="101" height="20" x="5" y="20" value="during skip">
+              <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionText"/>
+              <properties key="org.eclipse.graphiti.pattern.id.index" value="0"/>
+            </graphicsAlgorithm>
+            <link>
+              <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.3/@actions.0"/>
+            </link>
+          </children>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEoperationsSeparator"/>
+            <points y="40"/>
+            <points x="111" y="40"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="111" height="10" y="40">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnodesRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.3"/>
+          </link>
+        </children>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+        <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="121" height="51" x="50" y="210">
+          <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEouterRectangle"/>
+          <graphicsAlgorithmChildren xsi:type="al:Rectangle" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="121" height="51">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEmainRectangle"/>
+            <renderingStyle>
+              <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+                <adaptedGradientColoredAreas styleAdaption="0">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="254" green="254" blue="244"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="1">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="229" green="229" blue="194"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+                <adaptedGradientColoredAreas styleAdaption="2">
+                  <gradientColor>
+                    <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </start>
+                    <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                      <color red="250" green="250" blue="217"/>
+                    </end>
+                  </gradientColor>
+                </adaptedGradientColoredAreas>
+              </adaptedGradientColoredAreas>
+            </renderingStyle>
+          </graphicsAlgorithmChildren>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.4"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.4" incomingConnections="//@connections.3"/>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="121" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="S5">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEstateNameText"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.4"/>
+          </link>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnameSeparator"/>
+            <points y="20"/>
+            <points x="121" y="20"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="121" height="20" y="20">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.4"/>
+          </link>
+          <children visible="true" active="true">
+            <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="111" height="20" x="5" y="20" value="during skip">
+              <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEactionText"/>
+              <properties key="org.eclipse.graphiti.pattern.id.index" value="0"/>
+            </graphicsAlgorithm>
+            <link>
+              <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.4/@actions.0"/>
+            </link>
+          </children>
+        </children>
+        <children visible="true">
+          <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEoperationsSeparator"/>
+            <points y="40"/>
+            <points x="121" y="40"/>
+          </graphicsAlgorithm>
+        </children>
+        <children xsi:type="pi:ContainerShape" visible="true">
+          <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="121" height="11" y="40">
+            <properties key="org.eclipse.graphiti.pattern.id.id" value="STATEnodesRectangle"/>
+          </graphicsAlgorithm>
+          <link>
+            <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.4"/>
+          </link>
+        </children>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Ellipse" background="//@colors.1" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="19" height="19" x="226" y="231">
+          <graphicsAlgorithmChildren xsi:type="al:Ellipse" background="//@colors.2" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="15" height="15" x="2" y="2"/>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.5"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" incomingConnections="//@connections.4"/>
+      </children>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Ellipse" background="//@colors.2" foreground="//@colors.2" lineWidth="1" filled="true" transparency="0.0" width="19" height="19" x="16" y="26">
+          <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.1" lineWidth="1" filled="false" transparency="0.0" width="19" height="19" font="//@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="I"/>
+        </graphicsAlgorithm>
+        <link>
+          <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@nodes.6"/>
+        </link>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.5"/>
+      </children>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmOperationsSeparator"/>
+        <points y="20"/>
+        <points x="401" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="401" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmVariableNamesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmVariablesSeparator"/>
+        <points y="20"/>
+        <points x="401" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" transparency="0.0" width="401" height="251" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="stmNodesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1"/>
+      </link>
+    </children>
+  </children>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="org.eclipse.graphiti.pattern.patternType" value="org.eclipse.graphiti.pattern.idpattern"/>
+    <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" height="91" x="307" y="134">
+      <properties key="org.eclipse.graphiti.pattern.id.id" value="rpOuterRectangle"/>
+      <graphicsAlgorithmChildren xsi:type="al:Rectangle" lineWidth="1" filled="true" transparency="0.0" width="171" height="91">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpMainRectangle"/>
+        <renderingStyle>
+          <adaptedGradientColoredAreas definedStyleId="light-yellow" gradientType="0">
+            <adaptedGradientColoredAreas styleAdaption="0">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="254" green="254" blue="244"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="254" green="254" blue="244"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+            <adaptedGradientColoredAreas styleAdaption="1">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="229" green="229" blue="194"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="229" green="229" blue="194"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+            <adaptedGradientColoredAreas styleAdaption="2">
+              <gradientColor>
+                <start locationType="LOCATION_TYPE_ABSOLUTE_START" locationValue="0">
+                  <color red="250" green="250" blue="217"/>
+                </start>
+                <end locationType="LOCATION_TYPE_ABSOLUTE_END" locationValue="0">
+                  <color red="250" green="250" blue="217"/>
+                </end>
+              </gradientColor>
+            </adaptedGradientColoredAreas>
+          </adaptedGradientColoredAreas>
+        </renderingStyle>
+      </graphicsAlgorithmChildren>
+    </graphicsAlgorithm>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@robots.0"/>
+    </link>
+    <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.6 //@connections.7"/>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Text" lineWidth="1" filled="false" transparency="0.0" width="171" height="20" horizontalAlignment="ALIGNMENT_CENTER" value="Robotic Platform">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpNameText"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@robots.0"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpNameSeparator"/>
+        <points y="20"/>
+        <points x="171" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpOperationNamesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@robots.0"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpOperationsSeparator"/>
+        <points y="20"/>
+        <points x="171" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpEventNamesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@robots.0"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpEventsSeparator"/>
+        <points y="20"/>
+        <points x="171" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="171" y="20">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpVariableNamesRectangle"/>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@robots.0"/>
+      </link>
+    </children>
+    <children visible="true">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0">
+        <properties key="org.eclipse.graphiti.pattern.id.id" value="rpVariablesSeparator"/>
+        <points y="20"/>
+        <points x="171" y="20"/>
+      </graphicsAlgorithm>
+    </children>
+  </children>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="id" value="providedInterface"/>
+    <graphicsAlgorithm xsi:type="al:Ellipse" background="//@colors.2" foreground="//@colors.2" lineWidth="1" transparency="0.0" width="20" height="20" x="566" y="170"/>
+    <link businessObjects="//@connections.6"/>
+    <anchors xsi:type="pi:ChopboxAnchor" incomingConnections="//@connections.6"/>
+  </children>
+  <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <properties key="id" value="requiredInterface"/>
+    <graphicsAlgorithm xsi:type="al:Ellipse" background="//@colors.1" foreground="//@colors.2" lineWidth="1" transparency="0.0" width="20" height="20" x="436" y="302"/>
+    <link businessObjects="//@connections.7"/>
+    <anchors xsi:type="pi:ChopboxAnchor" incomingConnections="//@connections.7"/>
+  </children>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.0/@anchors.0" end="//@children.1/@children.2/@children.1/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.0"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.0"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.1/@anchors.0" end="//@children.1/@children.2/@children.2/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.1"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.1"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.2/@anchors.0" end="//@children.1/@children.2/@children.3/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.2"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.2"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.3/@anchors.0" end="//@children.1/@children.2/@children.4/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.3"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.3"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.4/@anchors.0" end="//@children.1/@children.2/@children.5/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.4"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.4"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.1/@children.2/@children.6/@anchors.0" end="//@children.1/@children.2/@children.0/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.5"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="10" font="//@fonts.2" value=""/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@stateMachines.1/@transitions.5"/>
+      </link>
+    </connectionDecorators>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0">
+        <points x="-15" y="10"/>
+        <points/>
+        <points x="-15" y="-10"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.2/@anchors.0" end="//@children.3/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="-36" y="-21" font="//@fonts.2" value="FixedTrajectory"/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+      </link>
+    </connectionDecorators>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.2/@anchors.0" end="//@children.4/@anchors.0">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.2" lineWidth="2" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+    </link>
+    <connectionDecorators visible="true" active="true" locationRelative="true" location="0.5">
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineWidth="1" filled="false" transparency="0.0" width="50" height="20" x="2" y="-15" font="//@fonts.2" value="FixedTrajectory"/>
+      <link>
+        <businessObjects href="FixedTrajectory.rcm#//@interfaces.0"/>
+      </link>
+    </connectionDecorators>
+  </connections>
+  <colors red="227" green="238" blue="249"/>
+  <colors red="255" green="255" blue="255"/>
+  <colors/>
+  <fonts name="Arial" size="8" bold="true"/>
+  <fonts name="Courier" size="9"/>
+  <fonts name="Arial" size="8"/>
+</pi:Diagram>

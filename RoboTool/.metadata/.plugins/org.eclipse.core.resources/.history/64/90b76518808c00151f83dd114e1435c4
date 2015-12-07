@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<roboCalc:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:roboCalc="http://www.cs.york.ac.uk/circus/RoboCalc">
+  <interfaces name="Interface">
+    <operations name="NewOperation" isVoid="true"/>
+    <operations name="NewOperation1" isVoid="true"/>
+    <operations name="NewOperation2" isVoid="true"/>
+    <operations name="NewOperation3" isVoid="true"/>
+    <operations name="NewOperation4" isVoid="true"/>
+    <events name="canDetected"/>
+    <events name="nearBaskets"/>
+    <events name="nearEmpty"/>
+    <events name="nearBase"/>
+    <events name="canPicked"/>
+    <events name="dropCan"/>
+    <events name="NewEvent"/>
+  </interfaces>
+</roboCalc:Program>

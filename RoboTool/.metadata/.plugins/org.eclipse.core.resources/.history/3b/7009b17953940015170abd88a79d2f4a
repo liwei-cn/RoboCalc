@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<roboCalc:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roboCalc="http://www.cs.york.ac.uk/circus/RoboCalc">
+  <interfaces name="Interface">
+    <operations name="LookForCan" isVoid="true"/>
+    <operations name="PickUpCan" isVoid="true"/>
+    <operations name="MoveToBasket" isVoid="true"/>
+    <operations name="MoveToBase" isVoid="true"/>
+    <operations name="PutInBasket" isVoid="true"/>
+    <events name="canDetected"/>
+    <events name="nearBaskets"/>
+    <events name="nearEmpty"/>
+    <events name="nearBase"/>
+    <events name="canPicked"/>
+    <events name="dropCan"/>
+    
+    
+    
+    <events name="always"/>
+    <events name="NewEvent1"/>
+    <events name="NewEvent2"/>
+    <events name="NewEvent"/>
+    <events name="NewEvent3"/>
+  </interfaces>
+  <robots name="Robotic Platform" pInterfaces="//@interfaces.0" rInterfaces="//@interfaces.0"/>
+  <stateMachines name="FSM" rInterfaces="//@interfaces.0">
+    <nodes xsi:type="roboCalc:State" name="LookFor">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="PickUp">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="MoveToBasket">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="PutInBasket">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <transitions source="//@stateMachines.0/@nodes.0" target="//@stateMachines.0/@nodes.1"/>
+    <transitions source="//@stateMachines.0/@nodes.1" target="//@stateMachines.0/@nodes.0"/>
+    <transitions source="//@stateMachines.0/@nodes.3" target="//@stateMachines.0/@nodes.0"/>
+    <transitions source="//@stateMachines.0/@nodes.2" target="//@stateMachines.0/@nodes.3"/>
+    <transitions source="//@stateMachines.0/@nodes.1" target="//@stateMachines.0/@nodes.2"/>
+    <transitions source="//@stateMachines.0/@nodes.2" target="//@stateMachines.0/@nodes.1"/>
+  </stateMachines>
+</roboCalc:Program>

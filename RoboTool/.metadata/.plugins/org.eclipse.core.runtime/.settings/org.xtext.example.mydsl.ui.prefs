@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.xtext.example.mydsl.MyDsl.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="org.xtext.example.mydsl.MyDsl.kw_state" deleted\="false" description\="State" enabled\="true" name\="State">state ${name}\n\t\t${cursor}\nend</template><template autoinsert\="true" context\="org.xtext.example.mydsl.MyDsl.kw_events" deleted\="false" description\="Event" enabled\="true" name\="Event">events \n\t\t${name}\t${code}\nend</template></templates>

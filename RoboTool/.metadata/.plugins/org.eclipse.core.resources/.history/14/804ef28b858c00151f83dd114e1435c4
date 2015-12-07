@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<roboCalc:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roboCalc="http://www.cs.york.ac.uk/circus/RoboCalc">
+  <interfaces name="Interface">
+    <operations name="NewOperation" isVoid="true"/>
+    <operations name="NewOperation1" isVoid="true"/>
+    <operations name="NewOperation2" isVoid="true"/>
+    <events name="NewEvent"/>
+  </interfaces>
+  <robots name="Robotic Platform" rInterfaces="//@interfaces.0"/>
+  <types xsi:type="roboCalc:DataType" name="int"/>
+  <types xsi:type="roboCalc:DataType" name="int"/>
+  <stateMachines name="State Machine">
+    <nodes xsi:type="roboCalc:State" name="S1">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="S2">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+  </stateMachines>
+  <stateMachines name="Robot Controller">
+    <nodes xsi:type="roboCalc:State" name="S1">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="S2">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="S3">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="S4">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:State" name="S5">
+      <actions xsi:type="roboCalc:DuringAction">
+        <action xsi:type="roboCalc:Skip"/>
+      </actions>
+    </nodes>
+    <nodes xsi:type="roboCalc:Final" name="NewFinal"/>
+    <nodes xsi:type="roboCalc:Initial" name="NewInitial"/>
+    <transitions source="//@stateMachines.1/@nodes.0" target="//@stateMachines.1/@nodes.1"/>
+    <transitions source="//@stateMachines.1/@nodes.1" target="//@stateMachines.1/@nodes.2"/>
+    <transitions source="//@stateMachines.1/@nodes.2" target="//@stateMachines.1/@nodes.3"/>
+    <transitions source="//@stateMachines.1/@nodes.3" target="//@stateMachines.1/@nodes.4"/>
+    <transitions source="//@stateMachines.1/@nodes.4" target="//@stateMachines.1/@nodes.5"/>
+    <transitions source="//@stateMachines.1/@nodes.6" target="//@stateMachines.1/@nodes.0"/>
+  </stateMachines>
+</roboCalc:Program>
